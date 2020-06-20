@@ -1,10 +1,16 @@
 import React from 'react';
-import Header from 'components/Header/Header'
+import HomePage from './pages/HomePage/HomePage';
+import SignIn from './pages/SignUpAndSignIn/SignIn';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
+function App (){
   return (
-    <div className="">
-      <Header />
+    <div>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/signin' component={SignIn} />
+        <Route exact path='/signup' component={SignIn} />
+      </Switch>
     </div>
   );
 }
